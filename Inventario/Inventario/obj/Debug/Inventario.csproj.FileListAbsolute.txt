@@ -15,3 +15,8 @@ C:\Users\Ferchito\Documents\Visual Studio 2015\Projects\Inventario\Inventario\ob
 C:\Users\Ferchito\Documents\Visual Studio 2015\Projects\Inventario\Inventario\obj\Debug\Inventario.pdb
 C:\Users\Ferchito\Documents\Visual Studio 2015\Projects\Inventario\Inventario\obj\Debug\Inventario.frmRegistrarCliente.resources
 C:\Users\Ferchito\Source\Repos\Parcial\Inventario\Inventario\bin\Debug\Inventario.exe.config
+C:\Users\Ferchito\Source\Repos\Parcial\Inventario\Inventario\obj\Debug\Inventario.exe
+C:\Users\Ferchito\Source\Repos\Parcial\Inventario\Inventario\obj\Debug\Inventario.pdb
+C:\Users\cristian\Source\Repos\Parcial\Inventario\Inventario\bin\Debug\Inventario.exe.config
+C:\Users\cristian\Source\Repos\Parcial\Inventario\Inventario\obj\Debug\Inventario.exe
+C:\Users\cristian\Source\Repos\Parcial\Inventario\Inventario\obj\Debug\Inventario.pdb
