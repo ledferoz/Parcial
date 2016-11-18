@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Parcial" Class="ParcialDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=FERNANDO-PC\SQLEXPRESS;Initial Catalog=Parcial;Integrated Security=True" SettingsObjectName="Linq.Properties.Settings" SettingsPropertyName="ParcialConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Clientes" Member="Clientes">
+    <Type Name="Clientes">
+      <Column Name="IdClientePk" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nombres" Type="System.String" DbType="NChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Apellidos" Type="System.String" DbType="NChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Direccion" Type="System.String" DbType="NChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Telefono" Type="System.String" DbType="NChar(15) NOT NULL" CanBeNull="false" />
+      <Association Name="Clientes_Factura" Member="Factura" ThisKey="IdClientePk" OtherKey="IdClienteFk" Type="Factura" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Detalle" Member="Detalle">
+    <Type Name="Detalle">
+      <Column Name="IdDetalle" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IdFacturaFk" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdProductoFk" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Cantidad" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ValorParcial" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PrecioVenta" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Factura_Detalle" Member="Factura" ThisKey="IdFacturaFk" OtherKey="IdFacturaPk" Type="Factura" IsForeignKey="true" />
+      <Association Name="Producto_Detalle" Member="Producto" ThisKey="IdProductoFk" OtherKey="IdProductoPk" Type="Producto" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Establecimiento" Member="Establecimiento">
+    <Type Name="Establecimiento">
+      <Column Name="IdEstablecimientoPk" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="NChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Direccion" Type="System.String" DbType="NChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Telefono" Type="System.String" DbType="NChar(15) NOT NULL" CanBeNull="false" />
+      <Association Name="Establecimiento_Factura" Member="Factura" ThisKey="IdEstablecimientoPk" OtherKey="IdEstablecimientoFk" Type="Factura" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Factura" Member="Factura">
+    <Type Name="Factura">
+      <Column Name="IdFacturaPk" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ValorTotal" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdUsuarioFk" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdClienteFk" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdEstablecimientoFk" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Factura_Detalle" Member="Detalle" ThisKey="IdFacturaPk" OtherKey="IdFacturaFk" Type="Detalle" />
+      <Association Name="Clientes_Factura" Member="Clientes" ThisKey="IdClienteFk" OtherKey="IdClientePk" Type="Clientes" IsForeignKey="true" />
+      <Association Name="Establecimiento_Factura" Member="Establecimiento" ThisKey="IdEstablecimientoFk" OtherKey="IdEstablecimientoPk" Type="Establecimiento" IsForeignKey="true" />
+      <Association Name="Usuarios_Factura" Member="Usuarios" ThisKey="IdUsuarioFk" OtherKey="IdUsuarioPk" Type="Usuarios" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Producto" Member="Producto">
+    <Type Name="Producto">
+      <Column Name="IdProductoPk" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="NChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="IdProveedorFk" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FechaFabricacion" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="FechaCaducidad" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PesoKilos" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ValorCompra" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UtilidadNeta" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Cantidad" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Producto_Detalle" Member="Detalle" ThisKey="IdProductoPk" OtherKey="IdProductoFk" Type="Detalle" />
+      <Association Name="Proveedor_Producto" Member="Proveedor" ThisKey="IdProveedorFk" OtherKey="IdProveedorPk" Type="Proveedor" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Proveedor" Member="Proveedor">
+    <Type Name="Proveedor">
+      <Column Name="IdProveedorPk" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="NChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Direccion" Type="System.String" DbType="NChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Telefono" Type="System.String" DbType="NChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NChar(25) NOT NULL" CanBeNull="false" />
+      <Association Name="Proveedor_Producto" Member="Producto" ThisKey="IdProveedorPk" OtherKey="IdProveedorFk" Type="Producto" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Usuarios" Member="Usuarios">
+    <Type Name="Usuarios">
+      <Column Name="IdUsuarioPk" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="usuario" Type="System.String" DbType="VarChar(24) NOT NULL" CanBeNull="false" />
+      <Column Name="contrasenia" Type="System.String" DbType="VarChar(16) NOT NULL" CanBeNull="false" />
+      <Column Name="Rol" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Usuarios_Factura" Member="Factura" ThisKey="IdUsuarioPk" OtherKey="IdUsuarioFk" Type="Factura" />
+    </Type>
+  </Table>
+  <Function Name="dbo.iniciarSesion" Method="iniciarSesion">
+    <Parameter Name="usuario" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="contrasenia" Type="System.String" DbType="VarChar(16)" />
+    <ElementType Name="iniciarSesionResult">
+      <Column Name="Rol" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertarCliente" Method="InsertarCliente">
+    <Parameter Name="Nombres" Parameter="nombres" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="Apellidos" Parameter="apellidos" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="Direccion" Parameter="direccion" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="Telefono" Parameter="telefono" Type="System.String" DbType="NVarChar(15)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.registrarProveedor" Method="registrarProveedor">
+    <Parameter Name="nombre" Type="System.String" DbType="NChar(20)" />
+    <Parameter Name="direccion" Type="System.String" DbType="NChar(30)" />
+    <Parameter Name="telefono" Type="System.String" DbType="NChar(15)" />
+    <Parameter Name="email" Type="System.String" DbType="NChar(15)" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

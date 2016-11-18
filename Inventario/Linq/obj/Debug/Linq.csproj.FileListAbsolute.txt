@@ -1,0 +1,6 @@
+C:\Users\Ferchito\Documents\Visual Studio 2015\Projects\Inventario\Linq\bin\Debug\Linq.dll.config
+C:\Users\Ferchito\Documents\Visual Studio 2015\Projects\Inventario\Linq\bin\Debug\Linq.dll
+C:\Users\Ferchito\Documents\Visual Studio 2015\Projects\Inventario\Linq\bin\Debug\Linq.pdb
+C:\Users\Ferchito\Documents\Visual Studio 2015\Projects\Inventario\Linq\obj\Debug\Linq.csprojResolveAssemblyReference.cache
+C:\Users\Ferchito\Documents\Visual Studio 2015\Projects\Inventario\Linq\obj\Debug\Linq.dll
+C:\Users\Ferchito\Documents\Visual Studio 2015\Projects\Inventario\Linq\obj\Debug\Linq.pdb
