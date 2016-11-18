@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Linq;
 
 namespace Inventario
 {
@@ -15,6 +16,19 @@ namespace Inventario
         public frmConsultarProveedor()
         {
             InitializeComponent();
+        }
+
+        private void frmConsultarProveedor_Load(object sender, EventArgs e)
+        {
+            consultar();
+        }
+
+        public void consultar()
+        {
+          
+            ParcialDataContext objOrm = new ParcialDataContext();
+            var consulta = from d in objOrm.Proveedor select d;
+            dgvProveedores .DataSource = consulta.ToList();
         }
     }
 }
