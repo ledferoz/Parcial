@@ -4,28 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EBB88929-CAC5-487B-86E2-B1633F9936A1}</ProjectGuid>
+    <ProjectGuid>{E42000E6-A804-49FB-8AE4-F496F9F38779}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Inventario</RootNamespace>
     <AssemblyName>Inventario</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <PublishUrl>publicar\</PublishUrl>
-    <Install>true</Install>
-    <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
-    <UpdateMode>Foreground</UpdateMode>
-    <UpdateInterval>7</UpdateInterval>
-    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
-    <UpdatePeriodically>false</UpdatePeriodically>
-    <UpdateRequired>false</UpdateRequired>
-    <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
-    <UseApplicationTrust>false</UseApplicationTrust>
-    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -61,21 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FacturaDeCompra.cs">
+    <Compile Include="frmAdministrador.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FacturaDeCompra.Designer.cs">
-      <DependentUpon>FacturaDeCompra.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmAdministrador.cs" />
     <Compile Include="frmAdministrador.Designer.cs">
       <DependentUpon>frmAdministrador.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmConsultarCliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmConsultarCliente.Designer.cs">
-      <DependentUpon>frmConsultarCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="frmConsultarProveedor.cs">
       <SubType>Form</SubType>
@@ -88,12 +63,6 @@
     </Compile>
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmRegistrarCliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmRegistrarCliente.Designer.cs">
-      <DependentUpon>frmRegistrarCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="frmRegistrarProveedor.cs">
       <SubType>Form</SubType>
@@ -109,9 +78,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FacturaDeCompra.resx">
-      <DependentUpon>FacturaDeCompra.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmAdministrador.resx">
       <DependentUpon>frmAdministrador.cs</DependentUpon>
     </EmbeddedResource>
@@ -120,9 +86,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmRegistrarCliente.resx">
-      <DependentUpon>frmRegistrarCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegistrarProveedor.resx">
       <DependentUpon>frmRegistrarProveedor.cs</DependentUpon>
@@ -157,18 +120,6 @@
       <Project>{ecce99bc-3ebc-4daf-a8d3-987e4e787177}</Project>
       <Name>Linq</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
-      <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.5 %28x86 y x64%29</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

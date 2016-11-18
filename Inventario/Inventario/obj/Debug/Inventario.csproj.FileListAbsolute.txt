@@ -1,22 +1,17 @@
 C:\Users\cristian\Documents\Visual Studio 2015\Projects\Inventario\Inventario\bin\Debug\Inventario.exe.config
-C:\Users\Ferchito\Documents\Visual Studio 2015\Projects\Inventario\Inventario\bin\Debug\Inventario.exe.config
-C:\Users\Ferchito\Documents\Visual Studio 2015\Projects\Inventario\Inventario\obj\Debug\Inventario.csprojResolveAssemblyReference.cache
-C:\Users\Ferchito\Documents\Visual Studio 2015\Projects\Inventario\Inventario\obj\Debug\Inventario.FacturaDeCompra.resources
-C:\Users\Ferchito\Documents\Visual Studio 2015\Projects\Inventario\Inventario\obj\Debug\Inventario.frmAdministrador.resources
-C:\Users\Ferchito\Documents\Visual Studio 2015\Projects\Inventario\Inventario\obj\Debug\Inventario.frmLogin.resources
-C:\Users\Ferchito\Documents\Visual Studio 2015\Projects\Inventario\Inventario\obj\Debug\Inventario.frmVendedor.resources
-C:\Users\Ferchito\Documents\Visual Studio 2015\Projects\Inventario\Inventario\obj\Debug\Inventario.Properties.Resources.resources
-C:\Users\Ferchito\Documents\Visual Studio 2015\Projects\Inventario\Inventario\obj\Debug\Inventario.csproj.GenerateResource.Cache
-C:\Users\Ferchito\Documents\Visual Studio 2015\Projects\Inventario\Inventario\bin\Debug\Inventario.exe
-C:\Users\Ferchito\Documents\Visual Studio 2015\Projects\Inventario\Inventario\bin\Debug\Inventario.pdb
-C:\Users\Ferchito\Documents\Visual Studio 2015\Projects\Inventario\Inventario\bin\Debug\Linq.dll
-C:\Users\Ferchito\Documents\Visual Studio 2015\Projects\Inventario\Inventario\bin\Debug\Linq.pdb
-C:\Users\Ferchito\Documents\Visual Studio 2015\Projects\Inventario\Inventario\obj\Debug\Inventario.exe
-C:\Users\Ferchito\Documents\Visual Studio 2015\Projects\Inventario\Inventario\obj\Debug\Inventario.pdb
-C:\Users\Ferchito\Documents\Visual Studio 2015\Projects\Inventario\Inventario\obj\Debug\Inventario.frmRegistrarCliente.resources
-C:\Users\Ferchito\Source\Repos\Parcial\Inventario\Inventario\bin\Debug\Inventario.exe.config
-C:\Users\Ferchito\Source\Repos\Parcial\Inventario\Inventario\obj\Debug\Inventario.exe
-C:\Users\Ferchito\Source\Repos\Parcial\Inventario\Inventario\obj\Debug\Inventario.pdb
+C:\Users\cristian\Documents\Visual Studio 2015\Projects\Inventario\Inventario\bin\Debug\Inventario.exe
+C:\Users\cristian\Documents\Visual Studio 2015\Projects\Inventario\Inventario\bin\Debug\Inventario.pdb
+C:\Users\cristian\Documents\Visual Studio 2015\Projects\Inventario\Inventario\bin\Debug\Linq.dll
+C:\Users\cristian\Documents\Visual Studio 2015\Projects\Inventario\Inventario\bin\Debug\Linq.pdb
+C:\Users\cristian\Documents\Visual Studio 2015\Projects\Inventario\Inventario\obj\Debug\Inventario.csprojResolveAssemblyReference.cache
+C:\Users\cristian\Documents\Visual Studio 2015\Projects\Inventario\Inventario\obj\Debug\Inventario.frmAdministrador.resources
+C:\Users\cristian\Documents\Visual Studio 2015\Projects\Inventario\Inventario\obj\Debug\Inventario.frmLogin.resources
+C:\Users\cristian\Documents\Visual Studio 2015\Projects\Inventario\Inventario\obj\Debug\Inventario.frmVendedor.resources
+C:\Users\cristian\Documents\Visual Studio 2015\Projects\Inventario\Inventario\obj\Debug\Inventario.Properties.Resources.resources
+C:\Users\cristian\Documents\Visual Studio 2015\Projects\Inventario\Inventario\obj\Debug\Inventario.csproj.GenerateResource.Cache
+C:\Users\cristian\Documents\Visual Studio 2015\Projects\Inventario\Inventario\obj\Debug\Inventario.exe
+C:\Users\cristian\Documents\Visual Studio 2015\Projects\Inventario\Inventario\obj\Debug\Inventario.pdb
+C:\Users\cristian\Documents\Visual Studio 2015\Projects\Inventario\Inventario\obj\Debug\Inventario.frmRegistrarProveedor.resources
 C:\Users\cristian\Source\Repos\Parcial\Inventario\Inventario\bin\Debug\Inventario.exe.config
 C:\Users\cristian\Source\Repos\Parcial\Inventario\Inventario\obj\Debug\Inventario.exe
 C:\Users\cristian\Source\Repos\Parcial\Inventario\Inventario\obj\Debug\Inventario.pdb
