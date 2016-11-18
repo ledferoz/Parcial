@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventario", "Inventario\Inventario.csproj", "{E42000E6-A804-49FB-8AE4-F496F9F38779}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linq", "Linq\Linq.csproj", "{ECCE99BC-3EBC-4DAF-A8D3-987E4E787177}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventario", "Inventario\Inventario.csproj", "{EBB88929-CAC5-487B-86E2-B1633F9936A1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E42000E6-A804-49FB-8AE4-F496F9F38779}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E42000E6-A804-49FB-8AE4-F496F9F38779}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E42000E6-A804-49FB-8AE4-F496F9F38779}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E42000E6-A804-49FB-8AE4-F496F9F38779}.Release|Any CPU.Build.0 = Release|Any CPU
 		{ECCE99BC-3EBC-4DAF-A8D3-987E4E787177}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{ECCE99BC-3EBC-4DAF-A8D3-987E4E787177}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ECCE99BC-3EBC-4DAF-A8D3-987E4E787177}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ECCE99BC-3EBC-4DAF-A8D3-987E4E787177}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBB88929-CAC5-487B-86E2-B1633F9936A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBB88929-CAC5-487B-86E2-B1633F9936A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBB88929-CAC5-487B-86E2-B1633F9936A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBB88929-CAC5-487B-86E2-B1633F9936A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

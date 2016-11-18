@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E42000E6-A804-49FB-8AE4-F496F9F38779}</ProjectGuid>
+    <ProjectGuid>{EBB88929-CAC5-487B-86E2-B1633F9936A1}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Inventario</RootNamespace>
@@ -61,11 +61,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmAdministrador.cs">
+    <Compile Include="FacturaDeCompra.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FacturaDeCompra.Designer.cs">
+      <DependentUpon>FacturaDeCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdministrador.cs" />
     <Compile Include="frmAdministrador.Designer.cs">
       <DependentUpon>frmAdministrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultarCliente.Designer.cs">
+      <DependentUpon>frmConsultarCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="frmConsultarProveedor.cs">
       <SubType>Form</SubType>
@@ -78,6 +88,12 @@
     </Compile>
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegistrarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistrarCliente.Designer.cs">
+      <DependentUpon>frmRegistrarCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="frmRegistrarProveedor.cs">
       <SubType>Form</SubType>
@@ -93,6 +109,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FacturaDeCompra.resx">
+      <DependentUpon>FacturaDeCompra.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAdministrador.resx">
       <DependentUpon>frmAdministrador.cs</DependentUpon>
     </EmbeddedResource>
@@ -101,6 +120,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistrarCliente.resx">
+      <DependentUpon>frmRegistrarCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegistrarProveedor.resx">
       <DependentUpon>frmRegistrarProveedor.cs</DependentUpon>
