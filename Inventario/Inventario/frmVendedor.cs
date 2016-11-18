@@ -38,5 +38,18 @@ namespace Inventario
             formCliente.MdiParent = this;
             formCliente.Show();
         }
+
+        private void frmVendedor_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void registrarVentaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FacturaDeCompra fac = new FacturaDeCompra();
+            //Carga submenus
+            fac.MdiParent = this;
+            fac.Show();
+        }
     }
 }

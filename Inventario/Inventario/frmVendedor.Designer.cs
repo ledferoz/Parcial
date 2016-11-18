@@ -63,14 +63,14 @@
             // registrarClienteToolStripMenuItem
             // 
             this.registrarClienteToolStripMenuItem.Name = "registrarClienteToolStripMenuItem";
-            this.registrarClienteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.registrarClienteToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.registrarClienteToolStripMenuItem.Text = "Registrar";
             this.registrarClienteToolStripMenuItem.Click += new System.EventHandler(this.registrarClienteToolStripMenuItem_Click);
             // 
             // consultarToolStripMenuItem
             // 
             this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
-            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.consultarToolStripMenuItem.Text = "Consultar";
             this.consultarToolStripMenuItem.Click += new System.EventHandler(this.consultarToolStripMenuItem_Click);
             // 
@@ -80,14 +80,15 @@
             this.registrarVentaToolStripMenuItem,
             this.consultarVentaToolStripMenuItem});
             this.ventaToolStripMenuItem.Name = "ventaToolStripMenuItem";
-            this.ventaToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+            this.ventaToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.ventaToolStripMenuItem.Text = "Venta";
             // 
             // registrarVentaToolStripMenuItem
             // 
             this.registrarVentaToolStripMenuItem.Name = "registrarVentaToolStripMenuItem";
-            this.registrarVentaToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.registrarVentaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.registrarVentaToolStripMenuItem.Text = "Registrar";
+            this.registrarVentaToolStripMenuItem.Click += new System.EventHandler(this.registrarVentaToolStripMenuItem_Click);
             // 
             // consultarVentaToolStripMenuItem
             // 
@@ -112,6 +113,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmVendedor";
             this.Text = "Vendedor";
+            this.Load += new System.EventHandler(this.frmVendedor_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

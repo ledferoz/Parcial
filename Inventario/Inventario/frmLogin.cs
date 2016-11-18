@@ -41,11 +41,14 @@ namespace Inventario
                     frmAdministrador formAdministrador = new frmAdministrador();
                     formAdministrador.Show();
                     this.Hide();
+                    //Almacena usuario de sesion
+                    ClsSesion.usuario = txtUsuario.Text;
                     break;
                 case 2:
                     frmVendedor formVendedor = new frmVendedor();
                     formVendedor.Show();
                     this.Hide();
+                    ClsSesion.usuario = txtUsuario.Text;
                     break;
                
             }

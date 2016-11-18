@@ -74,7 +74,7 @@
             this.btnIniciarSesion.Name = "btnIniciarSesion";
             this.btnIniciarSesion.Size = new System.Drawing.Size(75, 23);
             this.btnIniciarSesion.TabIndex = 4;
-            this.btnIniciarSesion.Text = "InciarSesion";
+            this.btnIniciarSesion.Text = "IniciarSesion";
             this.btnIniciarSesion.UseVisualStyleBackColor = true;
             this.btnIniciarSesion.Click += new System.EventHandler(this.btnIniciarSesion_Click);
             // 

@@ -49,3 +49,6 @@ C:\Users\cristian\Source\Repos\Parcial\Inventario\Inventario\obj\Debug\Inventari
 C:\Users\cristian\Source\Repos\Parcial\Inventario\Inventario\obj\Debug\Inventario.csproj.GenerateResource.Cache
 C:\Users\cristian\Source\Repos\Parcial\Inventario\Inventario\obj\Debug\Inventario.frmRegistrarProducto.resources
 C:\Users\cristian\Source\Repos\Parcial\Inventario\Inventario\obj\Debug\Inventario.frmConsultarProducto.resources
+C:\Users\Ferchito\Source\Repos\Parcial\Inventario\Inventario\obj\Debug\Inventario.frmConsultarCliente.resources
+C:\Users\Ferchito\Source\Repos\Parcial\Inventario\Inventario\obj\Debug\Inventario.frmConsultarProducto.resources
+C:\Users\Ferchito\Source\Repos\Parcial\Inventario\Inventario\obj\Debug\Inventario.frmRegistrarProducto.resources

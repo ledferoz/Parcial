@@ -139,6 +139,27 @@ namespace Linq
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.actualizarCliente")]
+		public int actualizarCliente([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> id, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(20)")] string nombres, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(20)")] string apellidos, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(30)")] string direccion, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(15)")] string telefono)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), id, nombres, apellidos, direccion, telefono);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.actualizarProducto")]
+		public int actualizarProducto([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> id, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(20)")] string nombre, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> idProveedor, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="DateTime")] System.Nullable<System.DateTime> fechaFabricacion, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="DateTime")] System.Nullable<System.DateTime> fechaCaducidad, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PesoKilos", DbType="Int")] System.Nullable<int> pesoKilos, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> valorCompra, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> utilidadNeta, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> cantidad)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), id, nombre, idProveedor, fechaFabricacion, fechaCaducidad, pesoKilos, valorCompra, utilidadNeta, cantidad);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.actualizarProveedor")]
+		public int actualizarProveedor([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> idProveedor, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(20)")] string nombre, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(30)")] string direccion, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(15)")] string telefono, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(25)")] string email)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), idProveedor, nombre, direccion, telefono, email);
+			return ((int)(result.ReturnValue));
+		}
+		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.iniciarSesion")]
 		public ISingleResult<iniciarSesionResult> iniciarSesion([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(20)")] string usuario, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(16)")] string contrasenia)
 		{
@@ -153,20 +174,6 @@ namespace Linq
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.registrarProveedor")]
-		public int registrarProveedor([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(20)")] string nombre, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(30)")] string direccion, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(15)")] string telefono, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(15)")] string email)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), nombre, direccion, telefono, email);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.actualizarProveedor")]
-		public int actualizarProveedor([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> idProveedor, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(20)")] string nombre, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(30)")] string direccion, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(15)")] string telefono, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(25)")] string email)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), idProveedor, nombre, direccion, telefono, email);
-			return ((int)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.insertarProducto")]
 		public int insertarProducto([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(20)")] string nombre, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> idProveedor, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="DateTime")] System.Nullable<System.DateTime> fechaFabricacion, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="DateTime")] System.Nullable<System.DateTime> fechaCaducidad, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PesoKilos", DbType="Int")] System.Nullable<int> pesoKilos, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> valorCompra, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> utilidadNeta, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> cantidad)
 		{
@@ -174,17 +181,24 @@ namespace Linq
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.actualizarProducto")]
-		public int actualizarProducto([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> id, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(20)")] string nombre, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> idProveedor, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="DateTime")] System.Nullable<System.DateTime> fechaFabricacion, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="DateTime")] System.Nullable<System.DateTime> fechaCaducidad, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PesoKilos", DbType="Int")] System.Nullable<int> pesoKilos, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> valorCompra, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> utilidadNeta, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> cantidad)
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.registrarDetalleFactura")]
+		public int registrarDetalleFactura([global::System.Data.Linq.Mapping.ParameterAttribute(Name="IdFacturaFk", DbType="Int")] System.Nullable<int> idFacturaFk, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="IdProductoFk", DbType="Int")] System.Nullable<int> idProductoFk, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cantidad", DbType="Int")] System.Nullable<int> cantidad, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ValorParcial", DbType="Int")] System.Nullable<int> valorParcial, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PrecioVenta", DbType="Int")] System.Nullable<int> precioVenta)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), id, nombre, idProveedor, fechaFabricacion, fechaCaducidad, pesoKilos, valorCompra, utilidadNeta, cantidad);
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), idFacturaFk, idProductoFk, cantidad, valorParcial, precioVenta);
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.actualizarCliente")]
-		public int actualizarCliente([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> id, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(20)")] string nombres, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(20)")] string apellidos, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(30)")] string direccion, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(15)")] string telefono)
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.registrarFactura")]
+		public int registrarFactura([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Fecha", DbType="DateTime")] System.Nullable<System.DateTime> fecha, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> valorTotal, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> usuarios, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> cliente, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> establecimiento)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), id, nombres, apellidos, direccion, telefono);
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), fecha, valorTotal, usuarios, cliente, establecimiento);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.registrarProveedor")]
+		public int registrarProveedor([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(20)")] string nombre, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(30)")] string direccion, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(15)")] string telefono, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(15)")] string email)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), nombre, direccion, telefono, email);
 			return ((int)(result.ReturnValue));
 		}
 	}
@@ -229,7 +243,7 @@ namespace Linq
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdClientePk", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdClientePk", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int IdClientePk
 		{
 			get
@@ -422,7 +436,7 @@ namespace Linq
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdDetalle", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdDetalle", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int IdDetalle
 		{
 			get
@@ -854,7 +868,7 @@ namespace Linq
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdFacturaPk", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdFacturaPk", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int IdFacturaPk
 		{
 			get
@@ -1193,7 +1207,7 @@ namespace Linq
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdProductoPk", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdProductoPk", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int IdProductoPk
 		{
 			get

@@ -28,111 +28,171 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblIdEst = new System.Windows.Forms.Label();
             this.lblNomEst = new System.Windows.Forms.Label();
-            this.txtNomEst = new System.Windows.Forms.TextBox();
-            this.lblIdCli = new System.Windows.Forms.Label();
-            this.txtIdCom = new System.Windows.Forms.TextBox();
-            this.lblFecha = new System.Windows.Forms.Label();
-            this.fechaCompra = new System.Windows.Forms.DateTimePicker();
-            this.cmbRut = new System.Windows.Forms.ComboBox();
+            this.lblCliente = new System.Windows.Forms.Label();
+            this.cmbCliente = new System.Windows.Forms.ComboBox();
+            this.cmbNomEst = new System.Windows.Forms.ComboBox();
+            this.lblProd = new System.Windows.Forms.Label();
+            this.cmbProd = new System.Windows.Forms.ComboBox();
+            this.lblCantidad = new System.Windows.Forms.Label();
+            this.txtCant = new System.Windows.Forms.TextBox();
+            this.lblValPar = new System.Windows.Forms.Label();
+            this.txtValPar = new System.Windows.Forms.TextBox();
+            this.lblPreVen = new System.Windows.Forms.Label();
+            this.txtPreVen = new System.Windows.Forms.TextBox();
+            this.btnRegistrar = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // lblIdEst
-            // 
-            this.lblIdEst.AutoSize = true;
-            this.lblIdEst.Location = new System.Drawing.Point(13, 13);
-            this.lblIdEst.Name = "lblIdEst";
-            this.lblIdEst.Size = new System.Drawing.Size(30, 13);
-            this.lblIdEst.TabIndex = 0;
-            this.lblIdEst.Text = "RUT";
             // 
             // lblNomEst
             // 
             this.lblNomEst.AutoSize = true;
-            this.lblNomEst.Location = new System.Drawing.Point(256, 16);
+            this.lblNomEst.Location = new System.Drawing.Point(12, 18);
             this.lblNomEst.Name = "lblNomEst";
             this.lblNomEst.Size = new System.Drawing.Size(121, 13);
             this.lblNomEst.TabIndex = 2;
             this.lblNomEst.Text = "Nombre Establecimiento";
             // 
-            // txtNomEst
+            // lblCliente
             // 
-            this.txtNomEst.Location = new System.Drawing.Point(383, 13);
-            this.txtNomEst.Name = "txtNomEst";
-            this.txtNomEst.Size = new System.Drawing.Size(100, 20);
-            this.txtNomEst.TabIndex = 3;
+            this.lblCliente.AutoSize = true;
+            this.lblCliente.Location = new System.Drawing.Point(55, 57);
+            this.lblCliente.Name = "lblCliente";
+            this.lblCliente.Size = new System.Drawing.Size(39, 13);
+            this.lblCliente.TabIndex = 9;
+            this.lblCliente.Text = "Cliente";
             // 
-            // lblIdCli
+            // cmbCliente
             // 
-            this.lblIdCli.AutoSize = true;
-            this.lblIdCli.Location = new System.Drawing.Point(13, 51);
-            this.lblIdCli.Name = "lblIdCli";
-            this.lblIdCli.Size = new System.Drawing.Size(70, 13);
-            this.lblIdCli.TabIndex = 4;
-            this.lblIdCli.Text = "Id Comprador";
+            this.cmbCliente.FormattingEnabled = true;
+            this.cmbCliente.Location = new System.Drawing.Point(148, 52);
+            this.cmbCliente.Name = "cmbCliente";
+            this.cmbCliente.Size = new System.Drawing.Size(121, 21);
+            this.cmbCliente.TabIndex = 10;
+            this.cmbCliente.SelectedIndexChanged += new System.EventHandler(this.cmbCliente_SelectedIndexChanged);
             // 
-            // txtIdCom
+            // cmbNomEst
             // 
-            this.txtIdCom.Location = new System.Drawing.Point(100, 51);
-            this.txtIdCom.Name = "txtIdCom";
-            this.txtIdCom.Size = new System.Drawing.Size(100, 20);
-            this.txtIdCom.TabIndex = 5;
+            this.cmbNomEst.FormattingEnabled = true;
+            this.cmbNomEst.Location = new System.Drawing.Point(148, 15);
+            this.cmbNomEst.Name = "cmbNomEst";
+            this.cmbNomEst.Size = new System.Drawing.Size(121, 21);
+            this.cmbNomEst.TabIndex = 11;
+            this.cmbNomEst.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // lblFecha
+            // lblProd
             // 
-            this.lblFecha.AutoSize = true;
-            this.lblFecha.Location = new System.Drawing.Point(259, 57);
-            this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(101, 13);
-            this.lblFecha.TabIndex = 6;
-            this.lblFecha.Text = "Fecha de la compra";
-            this.lblFecha.Click += new System.EventHandler(this.label1_Click);
+            this.lblProd.AutoSize = true;
+            this.lblProd.Location = new System.Drawing.Point(326, 52);
+            this.lblProd.Name = "lblProd";
+            this.lblProd.Size = new System.Drawing.Size(50, 13);
+            this.lblProd.TabIndex = 12;
+            this.lblProd.Text = "Producto";
             // 
-            // fechaCompra
+            // cmbProd
             // 
-            this.fechaCompra.Location = new System.Drawing.Point(383, 57);
-            this.fechaCompra.Name = "fechaCompra";
-            this.fechaCompra.Size = new System.Drawing.Size(200, 20);
-            this.fechaCompra.TabIndex = 7;
+            this.cmbProd.FormattingEnabled = true;
+            this.cmbProd.Location = new System.Drawing.Point(399, 49);
+            this.cmbProd.Name = "cmbProd";
+            this.cmbProd.Size = new System.Drawing.Size(121, 21);
+            this.cmbProd.TabIndex = 13;
             // 
-            // cmbRut
+            // lblCantidad
             // 
-            this.cmbRut.FormattingEnabled = true;
-            this.cmbRut.Location = new System.Drawing.Point(79, 10);
-            this.cmbRut.Name = "cmbRut";
-            this.cmbRut.Size = new System.Drawing.Size(121, 21);
-            this.cmbRut.TabIndex = 8;
+            this.lblCantidad.AutoSize = true;
+            this.lblCantidad.Location = new System.Drawing.Point(55, 92);
+            this.lblCantidad.Name = "lblCantidad";
+            this.lblCantidad.Size = new System.Drawing.Size(49, 13);
+            this.lblCantidad.TabIndex = 14;
+            this.lblCantidad.Text = "Cantidad";
+            // 
+            // txtCant
+            // 
+            this.txtCant.Location = new System.Drawing.Point(148, 89);
+            this.txtCant.Name = "txtCant";
+            this.txtCant.Size = new System.Drawing.Size(100, 20);
+            this.txtCant.TabIndex = 15;
+            // 
+            // lblValPar
+            // 
+            this.lblValPar.AutoSize = true;
+            this.lblValPar.Location = new System.Drawing.Point(326, 89);
+            this.lblValPar.Name = "lblValPar";
+            this.lblValPar.Size = new System.Drawing.Size(66, 13);
+            this.lblValPar.TabIndex = 16;
+            this.lblValPar.Text = "Valor Parcial";
+            // 
+            // txtValPar
+            // 
+            this.txtValPar.Location = new System.Drawing.Point(399, 86);
+            this.txtValPar.Name = "txtValPar";
+            this.txtValPar.Size = new System.Drawing.Size(100, 20);
+            this.txtValPar.TabIndex = 17;
+            // 
+            // lblPreVen
+            // 
+            this.lblPreVen.AutoSize = true;
+            this.lblPreVen.Location = new System.Drawing.Point(36, 127);
+            this.lblPreVen.Name = "lblPreVen";
+            this.lblPreVen.Size = new System.Drawing.Size(68, 13);
+            this.lblPreVen.TabIndex = 18;
+            this.lblPreVen.Text = "Precio Venta";
+            // 
+            // txtPreVen
+            // 
+            this.txtPreVen.Location = new System.Drawing.Point(148, 124);
+            this.txtPreVen.Name = "txtPreVen";
+            this.txtPreVen.Size = new System.Drawing.Size(100, 20);
+            this.txtPreVen.TabIndex = 19;
+            // 
+            // btnRegistrar
+            // 
+            this.btnRegistrar.Location = new System.Drawing.Point(211, 217);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(124, 32);
+            this.btnRegistrar.TabIndex = 20;
+            this.btnRegistrar.Text = "Registrar Venta";
+            this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // FacturaDeCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(590, 261);
-            this.Controls.Add(this.cmbRut);
-            this.Controls.Add(this.fechaCompra);
-            this.Controls.Add(this.lblFecha);
-            this.Controls.Add(this.txtIdCom);
-            this.Controls.Add(this.lblIdCli);
-            this.Controls.Add(this.txtNomEst);
+            this.Controls.Add(this.btnRegistrar);
+            this.Controls.Add(this.txtPreVen);
+            this.Controls.Add(this.lblPreVen);
+            this.Controls.Add(this.txtValPar);
+            this.Controls.Add(this.lblValPar);
+            this.Controls.Add(this.txtCant);
+            this.Controls.Add(this.lblCantidad);
+            this.Controls.Add(this.cmbProd);
+            this.Controls.Add(this.lblProd);
+            this.Controls.Add(this.cmbNomEst);
+            this.Controls.Add(this.cmbCliente);
+            this.Controls.Add(this.lblCliente);
             this.Controls.Add(this.lblNomEst);
-            this.Controls.Add(this.lblIdEst);
             this.Name = "FacturaDeCompra";
             this.Text = "FacturaDeCompra";
+            this.Load += new System.EventHandler(this.FacturaDeCompra_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblIdEst;
         private System.Windows.Forms.Label lblNomEst;
-        private System.Windows.Forms.TextBox txtNomEst;
-        private System.Windows.Forms.Label lblIdCli;
-        private System.Windows.Forms.TextBox txtIdCom;
-        private System.Windows.Forms.Label lblFecha;
-        private System.Windows.Forms.DateTimePicker fechaCompra;
-        private System.Windows.Forms.ComboBox cmbRut;
+        private System.Windows.Forms.Label lblCliente;
+        private System.Windows.Forms.ComboBox cmbCliente;
+        private System.Windows.Forms.ComboBox cmbNomEst;
+        private System.Windows.Forms.Label lblProd;
+        private System.Windows.Forms.ComboBox cmbProd;
+        private System.Windows.Forms.Label lblCantidad;
+        private System.Windows.Forms.TextBox txtCant;
+        private System.Windows.Forms.Label lblValPar;
+        private System.Windows.Forms.TextBox txtValPar;
+        private System.Windows.Forms.Label lblPreVen;
+        private System.Windows.Forms.TextBox txtPreVen;
+        private System.Windows.Forms.Button btnRegistrar;
     }
 }
