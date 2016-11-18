@@ -139,25 +139,18 @@ namespace Linq
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.iniciarSesion")]
-		public ISingleResult<iniciarSesionResult> iniciarSesion([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(20)")] string usuario, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(16)")] string contrasenia)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), usuario, contrasenia);
-			return ((ISingleResult<iniciarSesionResult>)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.InsertarCliente")]
-		public int InsertarCliente([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Nombres", DbType="NVarChar(20)")] string nombres, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Apellidos", DbType="NVarChar(20)")] string apellidos, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Direccion", DbType="NVarChar(30)")] string direccion, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Telefono", DbType="NVarChar(15)")] string telefono)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), nombres, apellidos, direccion, telefono);
-			return ((int)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.registrarProveedor")]
 		public int registrarProveedor([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(20)")] string nombre, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(30)")] string direccion, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(15)")] string telefono, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(15)")] string email)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), nombre, direccion, telefono, email);
 			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.iniciarSesion")]
+		public ISingleResult<iniciarSesionResult> iniciarSesion([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(20)")] string usuario, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(16)")] string contrasenia)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), usuario, contrasenia);
+			return ((ISingleResult<iniciarSesionResult>)(result.ReturnValue));
 		}
 	}
 	

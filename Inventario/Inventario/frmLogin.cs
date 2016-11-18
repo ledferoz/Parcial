@@ -13,6 +13,8 @@ namespace Inventario
 {
     public partial class frmLogin : Form
     {
+     
+
         public frmLogin()
         {
             InitializeComponent();
@@ -21,7 +23,7 @@ namespace Inventario
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
             ParcialDataContext objConexion = new ParcialDataContext();
-            var resultado = from u in objConexion.iniciarSesion(txtUsuario.Text, txtContrasenia.Text) select u;
+            var resultado = from u in objConexion.iniciarSesion(txtUsuario.Text,txtContrasenia.Text) select u;
             int rol = 0;
             foreach (var item in resultado)
             {
@@ -45,8 +47,10 @@ namespace Inventario
                     formVendedor.Show();
                     this.Hide();
                     break;
-
+               
             }
+
+
         }
     }
 }

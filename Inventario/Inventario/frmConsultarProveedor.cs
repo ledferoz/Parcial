@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace Inventario
 {
-    public partial class frmVendedor : Form
+    public partial class frmConsultarProveedor : Form
     {
-        public frmVendedor()
+        public frmConsultarProveedor()
         {
             InitializeComponent();
-        }
-
-        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmLogin formLogin = new frmLogin();
-            formLogin.Show();
-            this.Hide();
         }
     }
 }

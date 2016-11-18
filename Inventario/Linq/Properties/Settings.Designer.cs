@@ -26,8 +26,8 @@ namespace Linq.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=FERNANDO-PC\\SQLEXPRESS;Initial Catalog=Parcial;Integrated Security=Tr" +
-            "ue")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=CRISTIAN10\\SQLEXPRESS;Initial Catalog=Parcial;Integrated Security=Tru" +
+            "e")]
         public string ParcialConnectionString {
             get {
                 return ((string)(this["ParcialConnectionString"]));

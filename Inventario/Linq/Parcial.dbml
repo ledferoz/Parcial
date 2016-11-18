@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Parcial" Class="ParcialDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=FERNANDO-PC\SQLEXPRESS;Initial Catalog=Parcial;Integrated Security=True" SettingsObjectName="Linq.Properties.Settings" SettingsPropertyName="ParcialConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=CRISTIAN10\SQLEXPRESS;Initial Catalog=Parcial;Integrated Security=True" SettingsObjectName="Linq.Properties.Settings" SettingsPropertyName="ParcialConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Clientes" Member="Clientes">
     <Type Name="Clientes">
       <Column Name="IdClientePk" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -79,25 +79,18 @@
       <Association Name="Usuarios_Factura" Member="Factura" ThisKey="IdUsuarioPk" OtherKey="IdUsuarioFk" Type="Factura" />
     </Type>
   </Table>
-  <Function Name="dbo.iniciarSesion" Method="iniciarSesion">
-    <Parameter Name="usuario" Type="System.String" DbType="VarChar(20)" />
-    <Parameter Name="contrasenia" Type="System.String" DbType="VarChar(16)" />
-    <ElementType Name="iniciarSesionResult">
-      <Column Name="Rol" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.InsertarCliente" Method="InsertarCliente">
-    <Parameter Name="Nombres" Parameter="nombres" Type="System.String" DbType="NVarChar(20)" />
-    <Parameter Name="Apellidos" Parameter="apellidos" Type="System.String" DbType="NVarChar(20)" />
-    <Parameter Name="Direccion" Parameter="direccion" Type="System.String" DbType="NVarChar(30)" />
-    <Parameter Name="Telefono" Parameter="telefono" Type="System.String" DbType="NVarChar(15)" />
-    <Return Type="System.Int32" />
-  </Function>
   <Function Name="dbo.registrarProveedor" Method="registrarProveedor">
     <Parameter Name="nombre" Type="System.String" DbType="NChar(20)" />
     <Parameter Name="direccion" Type="System.String" DbType="NChar(30)" />
     <Parameter Name="telefono" Type="System.String" DbType="NChar(15)" />
     <Parameter Name="email" Type="System.String" DbType="NChar(15)" />
     <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.iniciarSesion" Method="iniciarSesion">
+    <Parameter Name="usuario" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="contrasenia" Type="System.String" DbType="VarChar(16)" />
+    <ElementType Name="iniciarSesionResult">
+      <Column Name="Rol" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
   </Function>
 </Database>
