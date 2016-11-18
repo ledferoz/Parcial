@@ -31,5 +31,50 @@ namespace Inventario
                 MessageBox.Show("No se ha registrado exitosamente el proveedor"+ ex.Message, "Registro Proveedor");
             }
         }
+
+        private void txtDireccion_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblDireccion_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTtelefono_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTelefono_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblCorreo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblNombre_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmRegistrarProveedor_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

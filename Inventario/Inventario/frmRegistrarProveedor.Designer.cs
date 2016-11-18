@@ -47,6 +47,7 @@
             this.lblNombre.Size = new System.Drawing.Size(47, 13);
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "Nombre:";
+            this.lblNombre.Click += new System.EventHandler(this.lblNombre_Click);
             // 
             // txtNombre
             // 
@@ -54,6 +55,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(100, 20);
             this.txtNombre.TabIndex = 1;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // txtDireccion
             // 
@@ -61,6 +63,7 @@
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(100, 20);
             this.txtDireccion.TabIndex = 3;
+            this.txtDireccion.TextChanged += new System.EventHandler(this.txtDireccion_TextChanged);
             // 
             // lblDireccion
             // 
@@ -70,6 +73,7 @@
             this.lblDireccion.Size = new System.Drawing.Size(55, 13);
             this.lblDireccion.TabIndex = 2;
             this.lblDireccion.Text = "Direccion:";
+            this.lblDireccion.Click += new System.EventHandler(this.lblDireccion_Click);
             // 
             // txtTelefono
             // 
@@ -77,6 +81,7 @@
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(100, 20);
             this.txtTelefono.TabIndex = 5;
+            this.txtTelefono.TextChanged += new System.EventHandler(this.txtTelefono_TextChanged);
             // 
             // lblTtelefono
             // 
@@ -86,6 +91,7 @@
             this.lblTtelefono.Size = new System.Drawing.Size(52, 13);
             this.lblTtelefono.TabIndex = 4;
             this.lblTtelefono.Text = "Telefono:";
+            this.lblTtelefono.Click += new System.EventHandler(this.lblTtelefono_Click);
             // 
             // lblCorreo
             // 
@@ -95,6 +101,7 @@
             this.lblCorreo.Size = new System.Drawing.Size(35, 13);
             this.lblCorreo.TabIndex = 6;
             this.lblCorreo.Text = "Email:";
+            this.lblCorreo.Click += new System.EventHandler(this.lblCorreo_Click);
             // 
             // txtEmail
             // 
@@ -102,6 +109,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(100, 20);
             this.txtEmail.TabIndex = 7;
+            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
             // btnRegistrar
             // 
@@ -129,6 +137,7 @@
             this.Controls.Add(this.lblNombre);
             this.Name = "frmRegistrarProveedor";
             this.Text = "Registrar Proveedor";
+            this.Load += new System.EventHandler(this.frmRegistrarProveedor_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

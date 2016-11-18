@@ -29,5 +29,11 @@ namespace Inventario
             frmRegistrarProveedor formProveedor = new frmRegistrarProveedor();
             formProveedor.Show();
         }
+
+        private void consultarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultarProveedor formProveedor = new frmConsultarProveedor();
+            formProveedor.Show();
+        }
     }
 }
