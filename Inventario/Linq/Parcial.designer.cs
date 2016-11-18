@@ -54,7 +54,7 @@ namespace Linq
     #endregion
 		
 		public ParcialDataContext() : 
-				base(global::Linq.Properties.Settings.Default.ParcialConnectionString, mappingSource)
+				base(global::Linq.Properties.Settings.Default.ParcialConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}
@@ -151,6 +151,13 @@ namespace Linq
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), usuario, contrasenia);
 			return ((ISingleResult<iniciarSesionResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.InsertarCliente")]
+		public int InsertarCliente([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Nombres", DbType="NVarChar(20)")] string nombres, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Apellidos", DbType="NVarChar(20)")] string apellidos, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Direccion", DbType="NVarChar(30)")] string direccion, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Telefono", DbType="NVarChar(15)")] string telefono)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), nombres, apellidos, direccion, telefono);
+			return ((int)(result.ReturnValue));
 		}
 	}
 	

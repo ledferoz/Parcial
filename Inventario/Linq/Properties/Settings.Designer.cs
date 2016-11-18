@@ -33,5 +33,16 @@ namespace Linq.Properties {
                 return ((string)(this["ParcialConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=FERNANDO-PC\\SQLEXPRESS;Initial Catalog=Parcial;Integrated Security=Tr" +
+            "ue")]
+        public string ParcialConnectionString1 {
+            get {
+                return ((string)(this["ParcialConnectionString1"]));
+            }
+        }
     }
 }
