@@ -27,13 +27,29 @@ namespace Inventario
         private void registrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmRegistrarProveedor formProveedor = new frmRegistrarProveedor();
+            formProveedor.MdiParent = this;
             formProveedor.Show();
         }
 
         private void consultarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmConsultarProveedor formProveedor = new frmConsultarProveedor();
+            formProveedor.MdiParent = this;
             formProveedor.Show();
+        }
+
+        private void registrarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmRegistrarProducto formProducto = new frmRegistrarProducto();
+            formProducto.MdiParent = this;
+            formProducto.Show();
+        }
+
+        private void consultarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmConsultarProducto formProducto = new frmConsultarProducto();
+            formProducto.MdiParent = this;
+            formProducto.Show();
         }
     }
 }

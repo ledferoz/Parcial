@@ -10,3 +10,9 @@ C:\Users\Ferchito\Source\Repos\Parcial\Inventario\Linq\bin\Debug\Linq.pdb
 C:\Users\Ferchito\Source\Repos\Parcial\Inventario\Linq\obj\Debug\Linq.csprojResolveAssemblyReference.cache
 C:\Users\Ferchito\Source\Repos\Parcial\Inventario\Linq\obj\Debug\Linq.dll
 C:\Users\Ferchito\Source\Repos\Parcial\Inventario\Linq\obj\Debug\Linq.pdb
+C:\Users\cristian\Source\Repos\Parcial\Inventario\Linq\bin\Debug\Linq.dll.config
+C:\Users\cristian\Source\Repos\Parcial\Inventario\Linq\bin\Debug\Linq.dll
+C:\Users\cristian\Source\Repos\Parcial\Inventario\Linq\bin\Debug\Linq.pdb
+C:\Users\cristian\Source\Repos\Parcial\Inventario\Linq\obj\Debug\Linq.csprojResolveAssemblyReference.cache
+C:\Users\cristian\Source\Repos\Parcial\Inventario\Linq\obj\Debug\Linq.dll
+C:\Users\cristian\Source\Repos\Parcial\Inventario\Linq\obj\Debug\Linq.pdb

@@ -129,8 +129,7 @@
             this.Controls.Add(this.lblApellido);
             this.Controls.Add(this.lblNombre);
             this.Name = "frmRegistrarCliente";
-            this.Text = "RegistrarCliente";
-            this.Load += new System.EventHandler(this.frmRegistrarCliente_Load);
+            this.Text = "Registrar Cliente";
             this.ResumeLayout(false);
             this.PerformLayout();
 

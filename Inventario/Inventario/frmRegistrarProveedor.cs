@@ -22,9 +22,18 @@ namespace Inventario
         {
             try
             {
-                ParcialDataContext objConexion = new ParcialDataContext();
-                objConexion.registrarProveedor(txtNombre.Text,txtDireccion.Text,txtTelefono.Text,txtEmail.Text);
-                MessageBox.Show("Se ha registrado exitosamente el proveedor","Registro Proveedor");
+                if (!txtNombre.Text.Equals("") && !txtDireccion.Text.Equals("") && !txtTelefono.Text.Equals("") && !txtEmail.Text.Equals(""))
+                {
+                    ParcialDataContext objConexion = new ParcialDataContext();
+                    objConexion.registrarProveedor(txtNombre.Text, txtDireccion.Text, txtTelefono.Text, txtEmail.Text);
+                    MessageBox.Show("Se ha registrado exitosamente el proveedor", "Registro Proveedor");
+                    limpiar();
+                }
+                else
+                {
+                    MessageBox.Show("Se deben diligenciar todos los campos","Error");
+                }
+                
             }
             catch (Exception ex)
             {
@@ -32,49 +41,12 @@ namespace Inventario
             }
         }
 
-        private void txtDireccion_TextChanged(object sender, EventArgs e)
+        public void limpiar()
         {
-
-        }
-
-        private void txtEmail_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblDireccion_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblTtelefono_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtTelefono_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblCorreo_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblNombre_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtNombre_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void frmRegistrarProveedor_Load(object sender, EventArgs e)
-        {
-
+            txtNombre.ResetText();
+            txtDireccion.ResetText();
+            txtTelefono.ResetText();
+            txtEmail.ResetText();
         }
     }
 }

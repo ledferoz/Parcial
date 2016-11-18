@@ -27,20 +27,27 @@ namespace Inventario
         {
             try
             {
-                ParcialDataContext pdc = new ParcialDataContext();
-                pdc.InsertarCliente(txtNombre.Text,txtApellido.Text,txtDireccion.Text,txtTelefono.Text);
-                MessageBox.Show("Se ha registrado exitosamente el cliente, Registro Cliente");
+                if (!txtNombre.Text.Equals("") && !txtApellido.Text.Equals("") && !txtDireccion.Text.Equals("") && !txtTelefono.Text.Equals(""))
+                {
+                    ParcialDataContext pdc = new ParcialDataContext();
+                    pdc.InsertarCliente(txtNombre.Text, txtApellido.Text, txtDireccion.Text, txtTelefono.Text);
+                    MessageBox.Show("Se ha registrado exitosamente el cliente", "Registro Cliente");
+                    limpiar();
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("No se ha registrado exitosamente el cliente" + ex.Message, "Registro Cliente");
-                throw;
+
             }
         }
 
-        private void frmRegistrarCliente_Load(object sender, EventArgs e)
+        public void limpiar()
         {
-
+            txtNombre.ResetText();
+            txtApellido.ResetText();
+            txtDireccion.ResetText();
+            txtTelefono.ResetText();
         }
     }
 }

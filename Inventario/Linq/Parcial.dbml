@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Parcial" Class="ParcialDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=FERNANDO-PC\SQLEXPRESS;Initial Catalog=Parcial;Integrated Security=True" SettingsObjectName="Linq.Properties.Settings" SettingsPropertyName="ParcialConnectionString1" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=CRISTIAN10\SQLEXPRESS;Initial Catalog=Parcial;Integrated Security=True" SettingsObjectName="Linq.Properties.Settings" SettingsPropertyName="ParcialConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Clientes" Member="Clientes">
     <Type Name="Clientes">
       <Column Name="IdClientePk" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -24,7 +24,7 @@
   </Table>
   <Table Name="dbo.Establecimiento" Member="Establecimiento">
     <Type Name="Establecimiento">
-      <Column Name="IdEstablecimientoPk" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IdEstablecimientoPk" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="Nombre" Type="System.String" DbType="NChar(30) NOT NULL" CanBeNull="false" />
       <Column Name="Direccion" Type="System.String" DbType="NChar(30) NOT NULL" CanBeNull="false" />
       <Column Name="Telefono" Type="System.String" DbType="NChar(15) NOT NULL" CanBeNull="false" />
@@ -62,7 +62,7 @@
   </Table>
   <Table Name="dbo.Proveedor" Member="Proveedor">
     <Type Name="Proveedor">
-      <Column Name="IdProveedorPk" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IdProveedorPk" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="Nombre" Type="System.String" DbType="NChar(20) NOT NULL" CanBeNull="false" />
       <Column Name="Direccion" Type="System.String" DbType="NChar(30) NOT NULL" CanBeNull="false" />
       <Column Name="Telefono" Type="System.String" DbType="NChar(15) NOT NULL" CanBeNull="false" />
@@ -79,13 +79,6 @@
       <Association Name="Usuarios_Factura" Member="Factura" ThisKey="IdUsuarioPk" OtherKey="IdUsuarioFk" Type="Factura" />
     </Type>
   </Table>
-  <Function Name="dbo.registrarProveedor" Method="registrarProveedor">
-    <Parameter Name="nombre" Type="System.String" DbType="NChar(20)" />
-    <Parameter Name="direccion" Type="System.String" DbType="NChar(30)" />
-    <Parameter Name="telefono" Type="System.String" DbType="NChar(15)" />
-    <Parameter Name="email" Type="System.String" DbType="NChar(15)" />
-    <Return Type="System.Int32" />
-  </Function>
   <Function Name="dbo.iniciarSesion" Method="iniciarSesion">
     <Parameter Name="usuario" Type="System.String" DbType="VarChar(20)" />
     <Parameter Name="contrasenia" Type="System.String" DbType="VarChar(16)" />
@@ -98,6 +91,52 @@
     <Parameter Name="Apellidos" Parameter="apellidos" Type="System.String" DbType="NVarChar(20)" />
     <Parameter Name="Direccion" Parameter="direccion" Type="System.String" DbType="NVarChar(30)" />
     <Parameter Name="Telefono" Parameter="telefono" Type="System.String" DbType="NVarChar(15)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.registrarProveedor" Method="registrarProveedor">
+    <Parameter Name="nombre" Type="System.String" DbType="NChar(20)" />
+    <Parameter Name="direccion" Type="System.String" DbType="NChar(30)" />
+    <Parameter Name="telefono" Type="System.String" DbType="NChar(15)" />
+    <Parameter Name="email" Type="System.String" DbType="NChar(15)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.actualizarProveedor" Method="actualizarProveedor">
+    <Parameter Name="idProveedor" Type="System.Int32" DbType="Int" />
+    <Parameter Name="nombre" Type="System.String" DbType="NChar(20)" />
+    <Parameter Name="direccion" Type="System.String" DbType="NChar(30)" />
+    <Parameter Name="telefono" Type="System.String" DbType="NChar(15)" />
+    <Parameter Name="email" Type="System.String" DbType="NChar(25)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.insertarProducto" Method="insertarProducto">
+    <Parameter Name="nombre" Type="System.String" DbType="NChar(20)" />
+    <Parameter Name="idProveedor" Type="System.Int32" DbType="Int" />
+    <Parameter Name="fechaFabricacion" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="fechaCaducidad" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="PesoKilos" Parameter="pesoKilos" Type="System.Int32" DbType="Int" />
+    <Parameter Name="valorCompra" Type="System.Int32" DbType="Int" />
+    <Parameter Name="utilidadNeta" Type="System.Int32" DbType="Int" />
+    <Parameter Name="cantidad" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.actualizarProducto" Method="actualizarProducto">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="nombre" Type="System.String" DbType="NChar(20)" />
+    <Parameter Name="idProveedor" Type="System.Int32" DbType="Int" />
+    <Parameter Name="fechaFabricacion" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="fechaCaducidad" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="PesoKilos" Parameter="pesoKilos" Type="System.Int32" DbType="Int" />
+    <Parameter Name="valorCompra" Type="System.Int32" DbType="Int" />
+    <Parameter Name="utilidadNeta" Type="System.Int32" DbType="Int" />
+    <Parameter Name="cantidad" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.actualizarCliente" Method="actualizarCliente">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="nombres" Type="System.String" DbType="NChar(20)" />
+    <Parameter Name="apellidos" Type="System.String" DbType="NChar(20)" />
+    <Parameter Name="direccion" Type="System.String" DbType="NChar(30)" />
+    <Parameter Name="telefono" Type="System.String" DbType="NChar(15)" />
     <Return Type="System.Int32" />
   </Function>
 </Database>

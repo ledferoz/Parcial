@@ -23,5 +23,20 @@ namespace Inventario
             formLogin.Show();
             this.Hide();
         }
+
+        private void registrarClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRegistrarCliente formCliente = new frmRegistrarCliente();
+            formCliente.MdiParent = this;
+            formCliente.Show();
+            
+        }
+
+        private void consultarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultarCliente formCliente = new frmConsultarCliente();
+            formCliente.MdiParent = this;
+            formCliente.Show();
+        }
     }
 }

@@ -37,12 +37,14 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
             this.dgvProveedores = new System.Windows.Forms.DataGridView();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.txtId = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProveedores)).BeginInit();
             this.SuspendLayout();
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(134, 188);
+            this.txtEmail.Location = new System.Drawing.Point(128, 106);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(100, 20);
             this.txtEmail.TabIndex = 15;
@@ -50,7 +52,7 @@
             // lblCorreo
             // 
             this.lblCorreo.AutoSize = true;
-            this.lblCorreo.Location = new System.Drawing.Point(57, 188);
+            this.lblCorreo.Location = new System.Drawing.Point(51, 106);
             this.lblCorreo.Name = "lblCorreo";
             this.lblCorreo.Size = new System.Drawing.Size(35, 13);
             this.lblCorreo.TabIndex = 14;
@@ -58,7 +60,7 @@
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(134, 141);
+            this.txtTelefono.Location = new System.Drawing.Point(559, 50);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(100, 20);
             this.txtTelefono.TabIndex = 13;
@@ -66,7 +68,7 @@
             // lblTtelefono
             // 
             this.lblTtelefono.AutoSize = true;
-            this.lblTtelefono.Location = new System.Drawing.Point(57, 144);
+            this.lblTtelefono.Location = new System.Drawing.Point(482, 53);
             this.lblTtelefono.Name = "lblTtelefono";
             this.lblTtelefono.Size = new System.Drawing.Size(52, 13);
             this.lblTtelefono.TabIndex = 12;
@@ -74,7 +76,7 @@
             // 
             // txtDireccion
             // 
-            this.txtDireccion.Location = new System.Drawing.Point(128, 93);
+            this.txtDireccion.Location = new System.Drawing.Point(340, 53);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(100, 20);
             this.txtDireccion.TabIndex = 11;
@@ -82,7 +84,7 @@
             // lblDireccion
             // 
             this.lblDireccion.AutoSize = true;
-            this.lblDireccion.Location = new System.Drawing.Point(51, 96);
+            this.lblDireccion.Location = new System.Drawing.Point(263, 56);
             this.lblDireccion.Name = "lblDireccion";
             this.lblDireccion.Size = new System.Drawing.Size(55, 13);
             this.lblDireccion.TabIndex = 10;
@@ -106,17 +108,40 @@
             // 
             // dgvProveedores
             // 
+            this.dgvProveedores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvProveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProveedores.Location = new System.Drawing.Point(42, 245);
+            this.dgvProveedores.Location = new System.Drawing.Point(45, 140);
             this.dgvProveedores.Name = "dgvProveedores";
-            this.dgvProveedores.Size = new System.Drawing.Size(240, 150);
+            this.dgvProveedores.Size = new System.Drawing.Size(630, 150);
             this.dgvProveedores.TabIndex = 16;
+            this.dgvProveedores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProveedores_CellClick);
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.Location = new System.Drawing.Point(365, 106);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(75, 23);
+            this.btnActualizar.TabIndex = 17;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            // 
+            // txtId
+            // 
+            this.txtId.Enabled = false;
+            this.txtId.Location = new System.Drawing.Point(559, 106);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(100, 20);
+            this.txtId.TabIndex = 18;
+            this.txtId.Visible = false;
             // 
             // frmConsultarProveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(313, 441);
+            this.ClientSize = new System.Drawing.Size(716, 324);
+            this.Controls.Add(this.txtId);
+            this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.dgvProveedores);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.lblCorreo);
@@ -146,5 +171,7 @@
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.DataGridView dgvProveedores;
+        private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.TextBox txtId;
     }
 }
